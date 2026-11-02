@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-02
 ---
 
 # Morning digest
@@ -77,3 +78,19 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader | — | claude-code · opus-5.5 · medium | 2026-11-02 |
+| 2 | Digest page | #1 (types.ts) | claude-code · sonnet-5.5 · default | 2026-11-02 |
+| 3 | Digest JSON | #1 (types.ts) | claude-code · haiku-5.5 · default | 2026-11-02 |
+| 4 | Board link | #1 (types.ts) | claude-code · sonnet-5.5 · default | 2026-11-02 |
+| 5 | Route tests | #1 (types.ts) | claude-code · haiku-5.5 · default | 2026-11-02 |
+| 6 | Preview for review | #2 | claude-code · opus-5.5 · medium | 2026-11-02 |
+| 7 | Clean up | #6, review in | claude-code · opus-5.5 · medium | 2026-11-02 |
+
+#6 was first closed when the link was sent, before the reviewer looked; it was reopened and
+closed again once the review was in. The preview lived on Cloudflare Pages; the marked
+deployment was deleted after the clean upload, because Pages keeps each deployment on its own URL.
