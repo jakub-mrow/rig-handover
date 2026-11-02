@@ -80,7 +80,7 @@ describe('GET /digest/:night', () => {
     expect(res.status).toBe(200);
     expect(html).toContain('lane/sync');
     expect(html).toContain('digest/render');
-    expect(html).toContain('1 line(s) did not parse');
+    expect(html).toMatch(/1 lines? did not parse/);
   });
 });
 
